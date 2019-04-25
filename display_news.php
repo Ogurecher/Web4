@@ -7,10 +7,10 @@ function display_news() {
 
     while($myrow = mysqli_fetch_assoc($result)) {
         ?>
-        <div style="width: 20%; height: auto; background: blue; color: white; margin: 1%">
-            <div style="margin: 5%">
-                <div style="margin: 5%"><?php echo $myrow['name']; ?></div>
-                <div style="color: yellow"><?php echo $myrow['content']; ?></div>
+        <div class="news_card">
+            <div>
+                <div ><?php echo $myrow['name']; ?></div>
+                <div class="flex_text"><?php echo $myrow['content']; ?></div>
                 <form action="delete_news.php" method="post">
                     <input type="hidden" name='name' value='<?php echo $myrow['name']; ?>'>
                     <input type="submit" value="Delete post">

@@ -7,30 +7,19 @@ include_once 'display_news.php';
 <meta charset="utf-8">
 
 <head>
-    <title>Новостной портал</title>
-    <style type="text/css">
-            
-        #top_bar {
-            width: 100%;
-            height: 100%;
-            float: left;
-            background: #a4b3ff;
-            color: white;
-        }
-    </style>
+    <title>News Portal</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
     <?php display_news(); ?>
-    <div id="top_bar">
-        <br>
-        <h3>::Add News</h3>
-        
+    <div class="form">
         <form action="add_news.php" method="post">
 			<div>
-				<input autocomplete="off" type="text" placeholder="Введите заголовок" name="name" required>
-				<textarea autocomplete="off" class="max" id="content" placeholder="Введите описание" name="content" required></textarea>
-				<input type="submit" value="Отправить">
+                <h1 class="submit_header"> Submit news </h1>
+				<input class="input_field"autocomplete="off" type="text" placeholder="Title" name="name" required>
+				<textarea class="textarea" autocomplete="off" class="max" id="content" placeholder="Content" name="content" required></textarea>
+				<input class="submit_button" type="submit" value="Submit">
 			</div>
 		</form>
     </div>
